@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale5.0">
+    <title>ArcadeHub - Unblocked Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">🎮 Arcade<span>Hub</span></div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search games (e.g., BitLife, Soccer)..." onkeyup="filterGames()">
+        </div>
+    </header>
+
+    <!-- Navigation / Categories -->
+    <nav class="categories">
+        <button class="cat-btn active" onclick="filterCategory('all')">All Games</button>
+        <button class="cat-btn" onclick="filterCategory('simulation')">Simulation</button>
+        <button class="cat-btn" onclick="filterCategory('sports')">Sports</button>
+        <button class="cat-btn" onclick="filterCategory('action')">Action</button>
+    </nav>
+
+    <!-- Main Game Grid -->
+    <main class="game-grid" id="gameGrid">
+        
+        <!-- Game Card: BitLife -->
+        <div class="game-card" data-category="simulation" data-name="bitlife simulator life">
+            <div class="game-thumb" style="background: linear-gradient(135deg, #ff416c, #ff4b2b);">👶</div>
+            <div class="game-info">
+                <h3>BitLife</h3>
+                <p>The ultimate text-based life simulation game.</p>
+                <button class="play-btn" onclick="openGame('BitLife', 'https://www.retrovideogame.co/embed/bitlife.html')">Play Now</button>
+            </div>
+        </div>
+
+        <!-- Game Card: Super Liquid Soccer -->
+        <div class="game-card" data-category="sports" data-name="super liquid soccer football">
+            <div class="game-thumb" style="background: linear-gradient(135deg, #11998e, #38ef7d);">⚽</div>
+            <div class="game-info">
+                <h3>Super Liquid Soccer</h3>
+                <p>Fast-paced arcade soccer action.</p>
+                <button class="play-btn" onclick="openGame('Super Liquid Soccer', 'https://html5.gamedistribution.com/')">Play Now</button>
+            </div>
+        </div>
+
+        <!-- Game Card: Retro Bowl -->
+        <div class="game-card" data-category="sports" data-name="retro bowl football">
+            <div class="game-thumb" style="background: linear-gradient(135deg, #f2994a, #f2c94c);">🏈</div>
+            <div class="game-info">
+                <h3>Retro Bowl</h3>
+                <p>Manage your dream football team to victory.</p>
+                <button class="play-btn" onclick="openGame('Retro Bowl', 'https://retrobowl.me')">Play Now</button>
+            </div>
+        </div>
+
+        <!-- Game Card: Slope -->
+        <div class="game-card" data-category="action" data-name="slope ball running">
+            <div class="game-thumb" style="background: linear-gradient(135deg, #2b5876, #4e4376);">🌀</div>
+            <div class="game-info">
+                <h3>Slope</h3>
+                <p>Steer a ball down a collapsing neon track.</p>
+                <button class="play-btn" onclick="openGame('Slope', 'https://slope-game.github.io/')">Play Now</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Game Player Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeGame()">&times; Close</span>
+            <h2 id="modalTitle">Game Title</h2>
+            <iframe id="gameFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ArcadeHub. Built for pure entertainment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
